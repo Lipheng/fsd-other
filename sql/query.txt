@@ -1,0 +1,61 @@
+DROP TABLE IF EXISTS menu;
+DROP TABLE IF EXISTS customer_order;
+DROP TABLE IF EXISTS catering;
+DROP TABLE IF EXISTS career;
+
+-- Create Tables
+
+CREATE TABLE menu (
+    menu_id     SERIAL PRIMARY KEY,
+    type        VARCHAR(20) NOT NULL,
+    menu_item   VARCHAR(20) NOT NULL,
+    price       DECIMAL(6,2) NOT NULL,
+    calories    INT,
+
+    CONSTRAINT valid_menu_type CHECK (type IN ('Burger', 'Add-on', 'Drinks')),
+    CONSTRAINT valid_menu_price CHECK (price < 50)
+);
+
+CREATE TABLE customer_order (
+    order_id    SERIAL PRIMARY KEY,
+    order_total DECIMAL(6,2) NOT NULL,
+
+    CONSTRAINT valid_order_total CHECK (order_total < 9999.99)
+);
+
+CREATE TABLE catering (
+    booking_id  SERIAL PRIMARY KEY,
+    name        TEXT NOT NULL,
+    no_people   INT NOT NULL,
+    no_meal     INT NOT NULL,
+    date        DATE DEFAULT CURRENT_DATE,
+    mobile_no   TEXT NOT NULL,
+    email       TEXT NOT NULL,
+    comment     TEXT
+);
+
+CREATE TABLE career (
+    applicant_id   SERIAL PRIMARY KEY,
+    name           TEXT,
+    date           DATE DEFAULT CURRENT_DATE,
+    mobile_no      TEXT
+);
+
+-- Insert Data
+
+INSERT INTO menu VALUES (DEFAULT, 'Burger', 'Beef Burger', 16, 354);
+INSERT INTO menu VALUES (DEFAULT, 'Burger', 'Chicken Burger', 12.5, 289);
+INSERT INTO menu VALUES (DEFAULT, 'Burger', 'Fish Burger', 16, 295);
+INSERT INTO menu VALUES (DEFAULT, 'Burger', 'Veggie Burger', 10, 177);
+INSERT INTO menu VALUES (DEFAULT, 'Add-on', 'Salad', 5.5, NULL);
+INSERT INTO menu VALUES (DEFAULT, 'Add-on', 'Chips', 4.5, NULL);
+INSERT INTO menu VALUES (DEFAULT, 'Drinks', 'Pepsi', 3, NULL);
+INSERT INTO menu VALUES (DEFAULT, 'Drinks', 'Fanta', 3, NULL);
+INSERT INTO menu VALUES (DEFAULT, 'Drinks', 'Coke', 3, NULL);
+INSERT INTO menu VALUES (DEFAULT, 'Drinks', 'Fruit Juice', 5, NULL);
+
+
+
+
+
+
