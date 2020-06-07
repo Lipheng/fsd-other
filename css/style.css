@@ -1,0 +1,357 @@
+/*
+    order of properties     dimension > position > style
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    width: 70%;
+
+    margin: 0 auto;
+    padding: 0;
+
+    border-color: #B8B8B8;
+}
+
+td {
+    padding: 5px;
+}
+
+#header, #body, #footer {
+    width: 1000px;
+    margin: auto;
+}
+
+@font-face {
+    font-family: simplifica;
+    src: url(font/typeface/simplifica.ttf);
+}
+
+h1, h2 {
+    font-family: simplifica;
+}
+
+h1 {
+    font-size: 50px;
+
+    color: #A9DC76;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+td, p, span {
+    font-family: Helvetica;
+}
+
+/* button */
+button, input[type=submit] {
+    display: inline-block;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin: 0;
+    text-decoration: none;
+    background: #A9DC76;
+    color: #000;
+    font-family: Helvetica;
+    font-size: 0.7rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: 0;
+     box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+     -webkit-appearance: none;
+     -webkit-box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+     -moz-box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+button:hover, button:focus, 
+input[type=submit]:hover, input[type=submit]:focus{
+    background: green;
+    color: #fff;
+}
+
+button:focus, input[type=submit]:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active, input[type=submit]:focus {
+    transform: scale(0.99);
+}
+
+/* form placeholder */
+
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+ }
+ ::-moz-placeholder {
+    font-style: italic;  
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+ }
+
+ /* form inputs */
+
+ input[type=text] {
+     width: 200px;
+     padding: 10px;
+     margin: 5px 0;
+     border: 0;
+     box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+     -webkit-appearance: none;
+     -webkit-box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+     -moz-box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+ }
+
+ input.submit-button {
+    margin: 5px 0;
+ }
+
+/* --------------------- header section --------------------- */
+
+#header {
+    height: 300px;
+}
+
+#header-logo-container {
+    height: 300px;
+    background-image: url(../img/healthyburger.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* --------------------- body section --------------------- */
+
+#body {
+    height: 1300px;
+    overflow: hidden;
+}
+
+#body-top {
+    height: 400px;
+
+    overflow: hidden;
+}
+
+#body-mid {
+    height: 550px;
+    overflow: hidden;
+}
+
+#body-bottom {
+    height: 350px;
+    overflow: hidden;
+    width: 25%;
+    margin: auto;
+}
+
+#body-top-left, #body-bottom-left {
+    width: 45%;
+    height: 300px; 
+
+    float: left;
+}
+
+#body-top-right {
+    width: 45%;
+    height: 400px;
+    float: right;
+}
+
+#body-mid-left {
+    width: 45%;
+    height: 500px;
+    float: left;
+}
+
+#body-bottom-right {
+    width: 45%;
+    height: 300px;
+    float: right;
+}
+
+#body-mid-right {
+    width: 45%;
+    height: 550px;
+    float: right;
+}
+
+#body-top-right-top {
+    height: 300px;
+
+    overflow: hidden;
+}
+
+#body-top-right-bottom {
+    height: 50px;
+}
+
+#body-top-right-bottom-left {
+    width: 20%;
+    float: left;
+
+    display: inline-block;
+}
+
+#body-top-right-bottom-right {
+    width: 45%;
+    padding-top: 12px;
+    
+    display: inline-block;
+
+
+}
+
+#body-mid-right-top {
+    height: 250px;
+    overflow: hidden;
+}
+
+#body-mid-right-bottom {
+    height: 300px;
+}
+
+/* body top section */
+
+#menu-main h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#menu-main h2 {
+    width: 90px;
+
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#menu-main h2:hover {
+    cursor: pointer;
+    color: #A9DC76;
+}
+
+#body-top-right-top table {
+    margin-top: 120px;
+}
+
+#body-top-right-top td {
+    white-space: nowrap;
+}
+
+#body-top-right-bottom-left p {
+    width: 100px;
+    margin-left: 9px;
+}
+
+#body-top-right-bottom-right input[type=submit] {
+    margin-left: 38px;
+}
+
+
+
+/* body mid section */
+
+#body-mid h1 {
+    text-align: center;
+}
+
+#body-mid-right-top form {
+    width: 55%;
+    margin: auto;
+}
+
+#body-mid-right-bottom table {
+    margin: auto;
+    margin-left: 100px; 
+}
+
+#body-mid-right-bottom #ud-search-result-heading {
+    font-family: simplifica;
+    font-size: 30px;
+    color: #A9DC76;
+    font-style: none;
+}
+
+#body-mid #catering-add-form {
+    width: 58%;
+    margin: auto;
+}
+
+#body-mid-right-bottom td {
+    white-space: nowrap;
+}
+
+.modal {
+    position: absolute;
+    z-index: 1000;
+}
+
+#ud-modal h1 {
+    color: green;
+}
+
+#ud-modal input[type=submit] {
+    margin-bottom: 10px;
+}
+
+/* body bottom section */
+
+/* delete */
+
+
+
+/* delete */
+
+#body-bottom h1 {
+    text-align: center;
+}
+
+#body-bottom form {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+/* --------------------- footer section --------------------- */ 
+
+#footer {
+    height: 300px;
+
+    padding-top: 125px;
+
+    background-color: #A9DC76;
+    overflow: hidden;
+}
+
+#footer-content {
+    width: 400px;
+    height: 150px;
+
+    margin: auto;
+}
+
+#footer p, #footer h1 {
+    text-align: center;
+
+    color: green;
+}
+
+#footer p {
+    font-style: italic;
+}
+
